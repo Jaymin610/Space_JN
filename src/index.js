@@ -41,7 +41,6 @@ function removeFav(resultUrl) {
 }
 
 function createDOM(data) {
-  console.log(data);
   const renderdata = data === "storage" ? storage : Object.values(favStorage);
   renderdata.forEach((d) => {
     //   Card

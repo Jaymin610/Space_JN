@@ -95,7 +95,7 @@ function createDOM(data) {
 
     // copyright
     const copy = document.createElement("span");
-    if (d.copyright === "undefined") copy.innerText = "";
+    if (d.copyright === undefined) copy.innerText = "";
     else copy.innerText = d.copyright;
 
     footer.append(copy);

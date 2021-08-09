@@ -91,8 +91,14 @@ function createDOM(data) {
 
     // Footer
     const footer = document.createElement("small");
-    footer.innerHTML = `<strong>${d.date}</strong>  <span>${d.copyright}</span>`;
+    footer.innerHTML = `<strong>${d.date}</strong>`;
 
+    // copyright
+    const copy = document.createElement("span");
+    if (d.copyright === "undefined") copy.innerText = "";
+    else copy.innerText = d.copyright;
+
+    footer.append(copy);
     cardBody.append(cardTitle, favourite, explanation, footer);
     link.append(img);
     card.append(link, cardBody);
